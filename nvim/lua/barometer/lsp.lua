@@ -1,5 +1,7 @@
 local cmd = vim.cmd
 
+local lspconfig_util = require "lspconfig.util"
+
 require("lspconfig").tsserver.setup {}
 
 require("lspconfig").dockerls.setup {}
@@ -46,6 +48,48 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspconfig").html.setup {
   capabilities = capabilities,
+}
+
+require("lspconfig").gopls.setup {
+  on_attach = on_attach_vim,
+  capabilities = capabilities,
+  cmd = { "gopls", "serve" },
+  root_dir = function(fname)
+    local Path = require "plenary.path"
+
+    local absolute_cwd = Path:new(vim.loop.cwd()):absolute()
+    local absolute_fname = Path:new(fname):absolute()
+
+    if string.find(absolute_cwd, "/cmd/", 1, true) and string.find(absolute_fname, absolute_cwd, 1, true) then
+      return absolute_cwd
+    end
+
+    return lspconfig_util.root_pattern("go.mod", ".git")(fname)
+  end,
+
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      linksInHover = false,
+      codelenses = {
+        generate = true,
+        gc_details = true,
+        regenerate_cgo = true,
+        tidy = true,
+        upgrade_depdendency = true,
+        vendor = true,
+        test = true,
+      },
+      usePlaceholders = true,
+    },
+  },
+
+  flags = {
+    debounce_text_changes = 200,
+  },
 }
 
 require("lspconfig").sumneko_lua.setup {

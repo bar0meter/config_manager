@@ -241,6 +241,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/barometer/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/home/barometer/.local/share/nvim/site/pack/packer/start/vim-go"
+  },
   ["vim-mix-format"] = {
     loaded = true,
     path = "/home/barometer/.local/share/nvim/site/pack/packer/start/vim-mix-format"

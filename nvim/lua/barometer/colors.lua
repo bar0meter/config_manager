@@ -11,6 +11,5 @@ g.lightline = {
 o.termguicolors = true
 
 cmd [[
-colorscheme gruvbox-material
+colorscheme onedark
 ]]
-

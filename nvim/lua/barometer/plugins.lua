@@ -63,7 +63,7 @@ require("packer").startup(function()
   use { "tjdevries/gruvbuddy.nvim", disable = false }
 
   use "morhetz/gruvbox"
-  use { "sainnhe/gruvbox-material", disable = false}
+  use { "sainnhe/gruvbox-material", disable = false }
   use { "tjdevries/cyclist.vim", disable = true }
 
   use "folke/tokyonight.nvim"
@@ -128,6 +128,7 @@ require("packer").startup(function()
   use "norcalli/nvim-colorizer.lua"
 
   use "ziglang/zig.vim"
+  use "fatih/vim-go"
 
   use "norcalli/nvim-base16.lua"
 end)
