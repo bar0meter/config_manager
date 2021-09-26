@@ -11,5 +11,5 @@ g.lightline = {
 o.termguicolors = true
 
 cmd [[
-colorscheme onedark
+colorscheme horizon
 ]]

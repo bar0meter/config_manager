@@ -418,7 +418,7 @@ awful.spawn.with_shell("picom")
 --awful.spawn.with_shell("kmix")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
-awful.spawn.with_shell("~/.config/polybar/launch.sh")
+awful.spawn.with_shell("~/.config/polybar/awesome_launch.sh")
 
 --For gaps between tiles
 beautiful.useless_gap = 10

@@ -1,0 +1,22 @@
+#! /bin/sh
+
+sxhkd &
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+feh --bg-scale ~/.config/wallpapers/forest-night.png
+picom &
+xrandr --output eDP-1 --off --output HDMI-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+$HOME/.config/polybar/bspwm_launch.sh &
+
+bspc wm -O HMDI-2 eDP-1
+bspc monitor eDP-1 -d VI VII VIII IX X
+bspc monitor HDMI-2 -d I II III IV V
+
+bspc config border_width         0
+bspc config window_gap          16
+
+bspc config split_ratio          0.6
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true

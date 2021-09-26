@@ -29,6 +29,7 @@ require("packer").startup(function()
   --use { "sheerun/vim-polyglot", disable = false }
 
   use "justinmk/vim-dirvish"
+  use "ntk148v/vim-horizon"
 
   --use "joshdick/onedark.vim" -- Theme inspired by Atom
   use "vigoux/oak"

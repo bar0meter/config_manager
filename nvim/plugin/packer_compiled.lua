@@ -245,6 +245,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/barometer/.local/share/nvim/site/pack/packer/start/vim-go"
   },
+  ["vim-horizon"] = {
+    loaded = true,
+    path = "/home/barometer/.local/share/nvim/site/pack/packer/start/vim-horizon"
+  },
   ["vim-mix-format"] = {
     loaded = true,
     path = "/home/barometer/.local/share/nvim/site/pack/packer/start/vim-mix-format"

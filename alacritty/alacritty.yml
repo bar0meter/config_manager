@@ -10,19 +10,19 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .9
+background_opacity: .85
 window.dynamic_title: true
 
 # Font Customization
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font
     style: Italic
   size: 9.5
   offset:
