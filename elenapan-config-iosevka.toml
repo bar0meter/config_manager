@@ -1,0 +1,77 @@
+# Custom Iosevka build
+[buildPlans.myosevka]     # <myosevka> is your plan name
+family = "Iosevka Custom" # Font menu family name
+design = [
+    "sans",
+    "expanded",
+    "leading-1250",
+    "term",
+    "v-l-hooky",
+    "v-a-singlestorey",
+    "v-i-italic",
+    "v-j-serifed",
+    "v-f-straight",
+    "v-g-singlestorey",
+    "v-m-longleg",
+    "v-t-standard",
+    "v-q-straight",
+    "v-y-straight",
+    "v-zero-slashed",
+    "v-one-serifed",
+    "v-three-flattop",
+    "v-tilde-low",
+    "v-asterisk-low",
+    "v-percent-dots",
+    "v-at-long",
+    "v-brace-curly",
+    "v-dollar-open",
+    "v-numbersign-slanted"
+] # Customize styles
+italic = [
+    "sans",
+    "leading-1250",
+    "term",
+    "v-l-hooky",
+    "v-a-singlestorey",
+    "v-i-italic",
+    "v-j-serifed",
+    "v-f-straight",
+    "v-g-singlestorey",
+    "v-m-longleg",
+    "v-t-standard",
+    "v-q-straight",
+    "v-y-straight",
+    "v-zero-slashed",
+    "v-one-serifed",
+    "v-three-flattop",
+    "v-tilde-low",
+    "v-asterisk-low",
+    "v-percent-dots",
+    "v-at-long",
+    "v-brace-curly",
+    "v-dollar-open"
+] # Customize styles
+
+
+# Override default building weights
+# When buildPlans.<plan name>.weights is absent
+# All weights would built and mapped to default shape/CSS
+[buildPlans.myosevka.weights.regular]
+shape = 400                            # Weight for glyph shapes
+menu  = 400                            # Weight for menu name
+css   = 400                            # Weight for webfont CSS
+
+[buildPlans.myosevka.weights.bold]
+shape = 700
+menu  = 700
+css   = 700
+# end weight section
+
+
+# Override default building slant sets
+# Format: <upright|italic|oblique> = <"normal"|"italic"|"oblique">
+# When this section is absent, all slants would be built.
+[buildPlans.myosevka.slants]
+upright = "normal"
+italic = "italic"
+oblique = "oblique"
