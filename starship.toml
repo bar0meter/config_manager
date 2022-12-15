@@ -1,87 +1,77 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$hostname$directory$git_branch$rust$nodejs$golang$python$ocaml$java$lua$time
+$character"""
+
+palette = 'barometer'
+
+[palettes.barometer]
+mustard = '214'
+grey = '060'
+
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[➜](bold red) "
-vicmd_symbol = "[➜](bold fg:215) "
+success_symbol = "[λ](bold green)"
+error_symbol = "[λ](bold red)"
 
-# [custom.shell]
-# command = "echo $STARSHIP_SHELL"  # shows output of command
-# when = """ test "$STARSHIP_SHELL" != "fish" """
-# style = "dimmed blue"
-# format = "[$output]($style)"
-# shell =["dash"]
+[hostname]
+ssh_only = false
+format = '[$hostname](bold blue) [ॐ ](white) '
 
-# [git_status]
+[line_break]
+disabled = false
 
 [aws]
-symbol = " "
-
-[battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
+disabled = true
 
 [git_branch]
-symbol = " "
+format = "[•](white) [$symbol $branch(:$remote_branch)]($style) "
+symbol = ""
+
+[time]
+disabled = false
+use_12hr = true
+format = '[•](white) [$time](grey) '
 
 [golang]
-symbol = " "
-
-[hg_branch]
-symbol = " "
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
 
 [java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[package]
-symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[swift]
-symbol = "ﯣ "
+format = "[$symbol](white)[($version )](mustard)"
+symbol = "@ "
 
 [lua]
-symbol = " "
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[nodejs]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[ocaml]
+format = "[$symbol](white)[($version )](mustard)"
+symbol = "@ "
+version_format = "${raw}"
+
+[python]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[rust]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[elixir]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[package]
+disabled = true
