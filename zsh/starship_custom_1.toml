@@ -1,0 +1,77 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$hostname$directory$git_branch$rust$nodejs$golang$python$ocaml$java$lua$time
+$character"""
+
+palette = 'barometer'
+
+[palettes.barometer]
+mustard = '214'
+grey = '060'
+
+[character]
+success_symbol = "[λ](bold green)"
+error_symbol = "[λ](bold red)"
+
+[hostname]
+ssh_only = false
+format = '[$hostname](bold blue) [ॐ ](white) '
+
+[line_break]
+disabled = false
+
+[aws]
+disabled = true
+
+[git_branch]
+format = "[•](white) [$symbol $branch(:$remote_branch)]($style) "
+symbol = ""
+
+[time]
+disabled = false
+use_12hr = true
+format = '[•](white) [$time](grey) '
+
+[golang]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[java]
+format = "[$symbol](white)[($version )](mustard)"
+symbol = "@ "
+
+[lua]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[nodejs]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[ocaml]
+format = "[$symbol](white)[($version )](mustard)"
+symbol = "@ "
+version_format = "${raw}"
+
+[python]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[rust]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[elixir]
+format = "[$symbol](white)[($version )](mustard)"
+version_format = "${raw}"
+symbol = "@ "
+
+[package]
+disabled = true
