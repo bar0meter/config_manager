@@ -1,0 +1,19 @@
+function git_clean
+git fetch -p
+set local
+  for f in (git branch --merged $base_branch | grep -v "\(master\|$base_branch\|\*\)" | awk '/\s*\w*\s*/ {print $1}')
+    set local $local $f
+  end
+
+  set remote
+  for f in (git branch -r | xargs basename)
+    set remote $remote $f
+  end
+
+  for f in $local
+    echo $remote | grep --quiet "\s$f\s"
+    if [ $status -gt 0 ]
+      git branch -d $f
+    end
+  end
+end
