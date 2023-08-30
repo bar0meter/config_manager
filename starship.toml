@@ -49,9 +49,9 @@ version_format = "${raw}"
 symbol = "@ "
 
 [nodejs]
-format = "[$symbol](white)[($version )](mustard)"
+format = "| [$symbol](green)[($version )](mustard)"
 version_format = "${raw}"
-symbol = "@ "
+symbol = "󰎙 "
 
 [ocaml]
 format = "[$symbol](white)[($version )](mustard)"
@@ -59,9 +59,9 @@ symbol = "@ "
 version_format = "${raw}"
 
 [python]
-format = "[$symbol](white)[($version )](mustard)"
+format = "| [$symbol](yellow)[($virtualenv )](yellow)[($version )](mustard)"
 version_format = "${raw}"
-symbol = "@ "
+symbol = "󰌠 "
 
 [rust]
 format = "[$symbol](white)[($version )](mustard)"
