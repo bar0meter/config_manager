@@ -42,7 +42,7 @@
 	ff = fetch --all --prune --tags
 	rb = rebase --autostash
 	cop = checkout --patch
-	bb = !better_git_branch.sh
+	bb = !. ~/.better_git_branch.sh
 	both = !git status | grep 'both modified' | cut -d ' ' -f5 | xargs nvim
 	cleanup = "!git branch --merged | grep -v \"\\*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d"
 	tree = log --oneline --decorate --graph
