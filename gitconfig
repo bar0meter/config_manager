@@ -1,0 +1,101 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Ajinkya
+	email = ajinkya060@gmail.com
+
+[push]
+	default = current
+	followTags = true
+	autoSetupRemote = true
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+	ui = true
+
+[remote]
+  pushDefault = origin
+
+[branch]
+	autosetuprebase = always
+
+[core]
+	editor = nvim
+	pager = delta
+
+[alias]
+	co = checkout
+	ci = commit
+	cim = commit --amend --no-edit --date=now
+	st = status
+	br = branch
+	ps = push
+	fps = push --force-with-lease
+	ap = add . -p
+	df = diff
+	pl = pull
+	rs = restore
+	rsg = restore --staged
+	rh = reset HEAD
+	rhh = reset --hard HEAD
+	ff = fetch --all --prune --tags
+	rb = rebase --autostash
+	cop = checkout --patch
+	bb = !better_git_branch.sh
+	both = !git status | grep 'both modified' | cut -d ' ' -f5 | xargs nvim
+	cleanup = "!git branch --merged | grep -v \"\\*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d"
+	tree = log --oneline --decorate --graph
+	ruf = "!. ~/.githelpers.sh && remove_untracked_files"
+	l = "!. ~/.githelpers.sh && pretty_git_log"
+	la = "!git l --all"
+	lr = "!git l -30"
+  lra = "!git lr --all"
+	lg = "!git l -G $1 -- $2"
+	feature = !sh -c 'git checkout --no-track -b $0 origin/main'
+
+
+[pull]
+	rebase = true
+	prune = true
+
+[fetch]
+	prune = true
+
+[commit]
+	gpgSign = true
+	verbose = true
+
+[gpg]
+	program = /opt/homebrew/bin/gpg
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[init]
+	defaultBranch = master
+
+[rebase]
+	instructionFormat = (%an <%ae>) %s
+	autostash = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[rerere]
+	enabled = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true    # use n and N to move between diff sections
+
+[help]
+	autocorrect = 20
