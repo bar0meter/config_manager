@@ -1,0 +1,128 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.guides.bracketPairs": false,
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.guides.highlightActiveIndentation": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "githubPullRequests.pullBranch": "never",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.organizeImports.reorder-python-imports": "always"
+    }
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "editor.stickyScroll.scrollWithEditor": false,
+  "workbench.tree.enableStickyScroll": false,
+  "editor.stickyScroll.maxLineCount": 1,
+  "editor.hover.sticky": false,
+  "editor.stickyScroll.enabled": false,
+  "vim.useSystemClipboard": true,
+  "editor.fontSize": 13,
+  "terminal.integrated.fontSize": 13,
+  "workbench.colorTheme": "Pale Fire High Contrast",
+  "editor.fontFamily": "JetbrainsMono Nerd Font Mono",
+
+  "workbench.activityBar.orientation": "vertical",
+  "git.autofetch": true,
+  "editor.guides.indentation": false,
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.cursorSurroundingLines": 5,
+  "editor.dragAndDrop": false,
+  "editor.fontLigatures": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.formatOnType": true,
+  "editor.hover.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.renderWhitespace": "none",
+  "editor.roundedSelection": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.tabCompletion": "onlySnippets",
+  "editor.wordBasedSuggestions": "off",
+  "editor.autoIndent": "advanced",
+  "editor.semanticTokenColorCustomizations": {
+    "[Pale Fire High Contrast]": {
+      "rules": {
+        "unresolvedReference": "#9C6363",
+        "parameter": "#DCDCCC",
+        "property": "#DFAF8F"
+      }
+    }
+  },
+  "editor.glyphMargin": false,
+  "editor.lineDecorationsWidth": 0, // undocumented
+  "editor.lineNumbers": "off",
+  "editor.lineNumbersMinChars": 0, // undocumented
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100,
+  "files.enableTrash": false,
+  "files.hotExit": "off",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.sendKeybindingsToShell": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt",
+    "editor.action.marker.nextInFiles"
+  ],
+  "update.enableWindowsBackgroundUpdates": false,
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.autoRepositoryDetection": "openEditors",
+  "debug.onTaskErrors": "debugAnyway",
+  "remote.SSH.useLocalServer": false,
+  // plugins
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "insertDateString.format": "YYYY-MM-DD HH:MM:00 ZZZZ",
+  "findJump.positionAbsolute": true,
+  "errorLens.exclude": [".*Unknown word.*"],
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.mode.active": "zen",
+  "githubPullRequests.remotes": ["upstream", "origin"],
+  "workbench.activityBar.location": "hidden",
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.autoUpdate": true,
+  "extensions.ignoreRecommendations": true,
+  "accessibility.dimUnfocused.enabled": false,
+  "projectNameInStatusBar.align": "right",
+  "projectNameInStatusBar.textStyle": "uppercase",
+  "workbench.panel.opensMaximized": "never",
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "hidden",
+  "window.newWindowDimensions": "maximized",
+  "window.restoreWindows": "none",
+  "window.title": "${rootPath}",
+  "filePathBar.statusBarAlignment": "right",
+  "window.titleBarStyle": "native",
+  "workbench.editor.showTabs": "none",
+  "workbench.editor.labelFormat": "long",
+  "workbench.editor.enablePreview": true,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.tree.indent": 16,
+  "workbench.useExperimentalGridLayout": true,
+  "editor.accessibilitySupport": "off",
+  "workbench.productIconTheme": "IntelliJ",
+  "workbench.colorCustomizations": {
+    "editorGutter.background": "#383838"
+  }
+}
